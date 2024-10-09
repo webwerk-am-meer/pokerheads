@@ -1,16 +1,24 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { Header } from "./components/header/Header.tsx";
-import { navigationLinks } from "./constants/navigationLink.tsx";
+import { OurApp } from "./components/our-app/OurApp.tsx";
+import { PokerheadsAcademy } from "./components/academy/PokerheadsAcademy.tsx";
+import { DevicesOverview } from "./components/DevicesOverview.tsx";
+import { Tournaments } from "./components/tournament/Tournaments.tsx";
+import { IngameOverview } from "./components/IngameOverview.tsx";
+import { Footer } from "./components/Footer.tsx";
+import { GlobalRankings } from "./components/ranking/GlobalRankings.tsx";
 
 export function App() {
   return (
     <Stack spacing="150px">
       <Header />
-      {navigationLinks.map(({ link, content }, index) => (
-        <Box key={index} id={link}>
-          {content}
-        </Box>
-      ))}
+      <OurApp />
+      <PokerheadsAcademy />
+      <DevicesOverview />
+      <Tournaments />
+      <IngameOverview />
+      <GlobalRankings />
+      <Footer />
     </Stack>
   );
 }

@@ -1,13 +1,12 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { navigationLinks } from "../../constants/navigationLink.tsx";
+import { NavText } from "./NavText.tsx";
 
 export function NavBar() {
   return (
     <Flex gap="50px">
-      {navigationLinks.map((n, i) => (
-        <Text fontWeight="600" fontSize="24px" lineHeight="35px" key={i}>
-          {n.name}
-        </Text>
+      {navigationLinks.map(({ name }, i) => (
+        <NavText text={name} key={i} />
       ))}
     </Flex>
   );

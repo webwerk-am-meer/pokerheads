@@ -10,11 +10,9 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import { customTheme } from "./theme/theme.ts";
 import "./assets/css/main.css";
 import { paddingBottom, paddingTop, paddingX } from "./constants/spacing.ts";
-import { Prank } from "./components/Prank.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
-  { path: "/prank", element: <Prank /> },
   { path: "*", element: <Navigate to="/" /> },
 ]);
 
@@ -22,7 +20,6 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ChakraProvider theme={customTheme}>
       <Box
-        minHeight="100svh"
         paddingBottom={paddingBottom}
         paddingX={paddingX}
         paddingTop={paddingTop}

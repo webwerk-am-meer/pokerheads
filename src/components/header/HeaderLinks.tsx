@@ -8,14 +8,9 @@ export function HeaderLinks() {
       <Text fontWeight="700" fontSize="24px" lineHeight="35px" align="center">
         Ein Account, für alle Plattformen
       </Text>
-      <Flex justify="center" gap="24px">
-        {externalLinks.map(({ image, topText, bottomText }, i) => (
-          <ExternalLinkCard
-            image={image}
-            topText={topText}
-            bottomText={bottomText}
-            key={i}
-          />
+      <Flex wrap="wrap" justify="center" gap="24px">
+        {externalLinks.map((linkInfo, i) => (
+          <ExternalLinkCard {...linkInfo} variant="large" key={i} />
         ))}
       </Flex>
     </Flex>
