@@ -3,7 +3,7 @@ import { DescriptionText, Title } from "../base/BaseText.tsx";
 import { InfoTabCard } from "../base/InfoTab.tsx";
 import { useState } from "react";
 import backgroundImage from "../../assets/images/academy_background.svg";
-import { academyTabs } from "./tabs.ts";
+import { academyTabs } from "./academyTabs.ts";
 import { RegisterButton } from "../base/RegisterButton.tsx";
 
 export function PokerheadsAcademy() {
@@ -26,10 +26,10 @@ export function PokerheadsAcademy() {
             position="absolute"
           />
           <Stack gap="23px">
-            {academyTabs.map((tabInfo, index) => (
+            {academyTabs.map((tabInfo) => (
               <InfoTabCard
                 onClick={() => setSelectedTab(tabInfo)}
-                key={index}
+                key={tabInfo.id}
                 isSelected={selectedTab.id === tabInfo.id}
                 tabText={tabInfo.tabText}
               />

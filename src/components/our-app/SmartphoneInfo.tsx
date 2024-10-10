@@ -43,9 +43,9 @@ export function SmartphoneInfo() {
       </InfoCardStack>
       <Box position="relative">
         <Image src={smartPhoneInfo} />
-        {infoIcons.map(({ top, left, content, title }, i) => (
+        {infoIcons.map(({ top, left, content, title, popoverPlacement }, i) => (
           <Box key={i}>
-            <Popover trigger="hover">
+            <Popover placement={popoverPlacement} trigger="hover">
               <PopoverTrigger>
                 <Image
                   position="absolute"
