@@ -32,7 +32,7 @@ export function Tournaments() {
           <Stack gap="23px">
             {tournamentTabs.map((tabInfo, index, list) => (
               <Box
-                key={tabInfo.id}
+                key={index}
                 transform={`translateX(${9 * (list.length - index)}px)`}
               >
                 <InfoTabCard

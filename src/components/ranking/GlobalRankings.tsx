@@ -5,12 +5,13 @@ import backgroundImage from "../../assets/images/tournaments_background.svg";
 import { InfoTabCard } from "../base/InfoTab.tsx";
 import { useState } from "react";
 import { rankingTabs } from "./rankingTabs.ts";
+import { allLinks } from "../header/navigationLinks.ts";
 
 export function GlobalRankings() {
   const [selectedTab, setSelectedTab] = useState(rankingTabs[0]);
 
   return (
-    <VStack zIndex={1} gap="50px">
+    <VStack id={allLinks.ranking.link} zIndex={1} gap="50px">
       <Title
         titleText="Globale Rangliste"
         underTitleText="Teste deine Fähigkeiten in der Rangliste"
@@ -27,10 +28,7 @@ export function GlobalRankings() {
           />
           <Stack gap="23px">
             {rankingTabs.map((tabInfo, index) => (
-              <Box
-                key={tabInfo.id}
-                transform={`translateX(${10 * (index + 1)}px)`}
-              >
+              <Box key={index} transform={`translateX(${10 * (index + 1)}px)`}>
                 <InfoTabCard
                   onClick={() => setSelectedTab(tabInfo)}
                   isSelected={tabInfo.id === selectedTab.id}

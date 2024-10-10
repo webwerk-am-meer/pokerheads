@@ -1,11 +1,20 @@
 import { Text } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export function NavText({ text, link }: { text: string; link?: string }) {
+export function NavText({ text, link }: { text: string; link: string }) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  function onClick() {
+    if (pathname !== link) {
+      navigate(link);
+    }
+    document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <Text
-      onClick={() => navigate(link ?? "/")}
+      onClick={onClick}
       _hover={{
         textDecoration: "underline",
       }}

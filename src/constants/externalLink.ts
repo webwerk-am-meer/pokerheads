@@ -1,4 +1,4 @@
-import browsers from "../assets/images/browsers.svg";
+import browsers from "../assets/images/browsers.png";
 import playstore from "../assets/images/playstore.png";
 import apple from "../assets/images/apple.png";
 

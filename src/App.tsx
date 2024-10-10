@@ -1,24 +1,20 @@
-import { Stack } from "@chakra-ui/react";
-import { Header } from "./components/header/Header.tsx";
-import { OurApp } from "./components/our-app/OurApp.tsx";
-import { PokerheadsAcademy } from "./components/academy/PokerheadsAcademy.tsx";
-import { DevicesOverview } from "./components/DevicesOverview.tsx";
-import { Tournaments } from "./components/tournament/Tournaments.tsx";
-import { IngameOverview } from "./components/IngameOverview.tsx";
-import { Footer } from "./components/Footer.tsx";
-import { GlobalRankings } from "./components/ranking/GlobalRankings.tsx";
+import "./assets/css/main.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DataSecurity } from "./components/AGB/DataSecurity.tsx";
+import { Imprint } from "./components/AGB/Imprint.tsx";
+import { HomePage } from "./components/HomePage.tsx";
+import { Agb } from "./components/AGB/Agb.tsx";
 
 export function App() {
   return (
-    <Stack spacing="150px">
-      <Header />
-      <OurApp />
-      <PokerheadsAcademy />
-      <DevicesOverview />
-      <Tournaments />
-      <IngameOverview />
-      <GlobalRankings />
-      <Footer />
-    </Stack>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<HomePage />} />
+        <Route path="/agb" element={<Agb />} />
+        <Route path="/datenschutz" element={<DataSecurity />} />
+        <Route path="/impressum" element={<Imprint />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

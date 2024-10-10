@@ -5,12 +5,13 @@ import { useState } from "react";
 import backgroundImage from "../../assets/images/academy_background.svg";
 import { academyTabs } from "./academyTabs.ts";
 import { RegisterButton } from "../base/RegisterButton.tsx";
+import { allLinks } from "../header/navigationLinks.ts";
 
 export function PokerheadsAcademy() {
   const [selectedTab, setSelectedTab] = useState(academyTabs[0]);
 
   return (
-    <VStack zIndex={1} gap="50px">
+    <VStack id={allLinks.training.link} zIndex={1} gap="50px">
       <Title
         titleText="Pokerheads Akademie"
         underTitleText="verbessere dein Spiel durch tägliches Training"
@@ -26,10 +27,10 @@ export function PokerheadsAcademy() {
             position="absolute"
           />
           <Stack gap="23px">
-            {academyTabs.map((tabInfo) => (
+            {academyTabs.map((tabInfo, index) => (
               <InfoTabCard
                 onClick={() => setSelectedTab(tabInfo)}
-                key={tabInfo.id}
+                key={index}
                 isSelected={selectedTab.id === tabInfo.id}
                 tabText={tabInfo.tabText}
               />

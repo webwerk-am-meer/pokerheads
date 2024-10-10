@@ -1,5 +1,5 @@
-import oddsQuizImage from "../../assets/images/odds_quiz.svg";
-import { InfoTabData, placeholderDescription, toIndexed } from "../base/tab.ts";
+import oddsQuizImage from "../../assets/images/odds_quiz.png";
+import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
 
 const tabData: InfoTabData[] = [
   {
@@ -29,4 +29,7 @@ const tabData: InfoTabData[] = [
   },
 ];
 
-export const academyTabs = toIndexed(tabData);
+export const academyTabs: InfoTab[] = tabData.map((tab, index) => ({
+  ...tab,
+  id: index,
+}));

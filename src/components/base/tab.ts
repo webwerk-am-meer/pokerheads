@@ -11,6 +11,6 @@ export const placeholderDescription =
   "\n" +
   "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.";
 
-export function toIndexed(infos: InfoTabData[]): InfoTab[] {
-  return infos.map((info, index) => ({ ...info, id: index }));
-}
+// export function toIndexed(infos: InfoTabData[]): InfoTab[] {
+//   return infos.map((info, index) => ({ ...info, id: index }));
+// }

@@ -1,13 +1,23 @@
 import { Flex } from "@chakra-ui/react";
-import { navigationLinks } from "../../constants/navigationLink.tsx";
+import { allDestinies } from "./navigationLinks.ts";
 import { NavText } from "./NavText.tsx";
+import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
+import { BurgerMenu } from "./BurgerMenu.tsx";
 
 export function NavBar() {
+  const showBurgerMenu = useResponsiveValue({ base: true, md: false });
+
   return (
     <Flex gap="50px">
-      {navigationLinks.map(({ name }, i) => (
-        <NavText text={name} key={i} />
-      ))}
+      {showBurgerMenu ? (
+        <BurgerMenu />
+      ) : (
+        <>
+          {allDestinies.map(({ name, link }, index) => (
+            <NavText text={name} link={link} key={index} />
+          ))}
+        </>
+      )}
     </Flex>
   );
 }

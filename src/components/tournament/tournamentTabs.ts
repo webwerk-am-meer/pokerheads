@@ -1,5 +1,5 @@
-import { InfoTabData, placeholderDescription, toIndexed } from "../base/tab.ts";
-import daily from "../../assets/images/daily_tournament.svg";
+import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
+import daily from "../../assets/images/daily_tournament.png";
 
 const tabData: InfoTabData[] = [
   {
@@ -19,4 +19,7 @@ const tabData: InfoTabData[] = [
   },
 ];
 
-export const tournamentTabs = toIndexed(tabData);
+export const tournamentTabs: InfoTab[] = tabData.map((tab, index) => ({
+  ...tab,
+  id: index,
+}));

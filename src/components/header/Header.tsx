@@ -1,14 +1,14 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import headerIcon from "../../assets/images/header_icon.svg";
-import headerSmartphone from "../../assets/images/header_smartphone.svg";
+import headerLogo from "../../assets/images/header_logo.png";
+import headerBackground from "../../assets/images/header_background.png";
 import { NavBar } from "./NavBar.tsx";
-import { HeaderLinks } from "./HeaderLinks.tsx";
+import { Links } from "./Links.tsx";
 
 export function Header() {
   return (
     <Flex direction="column">
       <Flex justify="space-between">
-        <Image src={headerIcon} />
+        <Image width="425px" height="94px" src={headerLogo} />
         <NavBar />
       </Flex>
       <Flex align="center" justify="space-between">
@@ -25,9 +25,9 @@ export function Header() {
             Elo-basiertes Ranglisten Poker mit täglichen Gewinnen
           </Text>
         </Flex>
-        <Image src={headerSmartphone} />
+        <Image width="481px" height="556px" src={headerBackground} />
       </Flex>
-      <HeaderLinks />
+      <Links />
     </Flex>
   );
 }

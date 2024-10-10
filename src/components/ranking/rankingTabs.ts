@@ -1,4 +1,4 @@
-import { InfoTabData, placeholderDescription, toIndexed } from "../base/tab.ts";
+import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
 import cashgame from "../../assets/images/cashgame.png";
 
 const tabData: InfoTabData[] = [
@@ -24,4 +24,7 @@ const tabData: InfoTabData[] = [
   },
 ];
 
-export const rankingTabs = toIndexed(tabData);
+export const rankingTabs: InfoTab[] = tabData.map((tab, index) => ({
+  ...tab,
+  id: index,
+}));

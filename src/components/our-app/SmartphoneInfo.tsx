@@ -10,11 +10,11 @@ import {
   PopoverHeader,
   PopoverTrigger,
 } from "@chakra-ui/react";
-import infoIcon from "../../assets/images/info_icon.svg";
-import smartPhoneInfo from "../../assets/images/smartphone_info.svg";
+import infoIcon from "../../assets/images/info_icon.png";
+import smartPhoneInfo from "../../assets/images/smartphone_info.png";
 import { infoIcons } from "./infoIcon.tsx";
 import { InfoCard, InfoCardStack } from "./InfoCard.tsx";
-import smartPhoneInfoBackground from "../../assets/images/smartphine_info_background.svg";
+import smartPhoneInfoBackground from "../../assets/images/smartphone_info_background.svg";
 import { DescriptionText } from "../base/BaseText.tsx";
 
 const width = 267;
@@ -42,32 +42,36 @@ export function SmartphoneInfo() {
         <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
       </InfoCardStack>
       <Box position="relative">
-        <Image src={smartPhoneInfo} />
-        {infoIcons.map(({ top, left, content, title, popoverPlacement }, i) => (
-          <Box key={i}>
-            <Popover placement={popoverPlacement} trigger="hover">
-              <PopoverTrigger>
-                <Image
-                  position="absolute"
-                  top={`${(top / height) * 100}%`}
-                  left={`${(left / width) * 100}%`}
-                  cursor="pointer"
-                  src={infoIcon}
-                />
-              </PopoverTrigger>
-              <PopoverContent bgColor="dark">
-                <PopoverArrow bgColor="dark" />
-                <PopoverCloseButton color="white" />
-                <PopoverHeader>
-                  <DescriptionText>{title}</DescriptionText>
-                </PopoverHeader>
-                <PopoverBody>
-                  <DescriptionText>{content}</DescriptionText>
-                </PopoverBody>
-              </PopoverContent>
-            </Popover>
-          </Box>
-        ))}
+        <Image width="267px" src={smartPhoneInfo} />
+        {infoIcons.map(
+          ({ top, left, content, title, popoverPlacement }, index) => (
+            <Box key={index}>
+              <Popover placement={popoverPlacement} trigger="hover">
+                <PopoverTrigger>
+                  <Image
+                    height="18px"
+                    width="18px"
+                    position="absolute"
+                    top={`${(top / height) * 100}%`}
+                    left={`${(left / width) * 100}%`}
+                    cursor="pointer"
+                    src={infoIcon}
+                  />
+                </PopoverTrigger>
+                <PopoverContent bgColor="dark">
+                  <PopoverArrow bgColor="dark" />
+                  <PopoverCloseButton color="white" />
+                  <PopoverHeader>
+                    <DescriptionText>{title}</DescriptionText>
+                  </PopoverHeader>
+                  <PopoverBody>
+                    <DescriptionText>{content}</DescriptionText>
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
+            </Box>
+          ),
+        )}
       </Box>
       <InfoCardStack>
         <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
