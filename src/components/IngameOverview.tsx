@@ -1,7 +1,7 @@
 import { Image, VStack } from "@chakra-ui/react";
 import { Title } from "./base/BaseText.tsx";
 import { CallToAction } from "./base/CallToAction.tsx";
-import background from "../assets/images/ingame_background.png";
+import background from "../assets/images/ingame_background.webp";
 
 export function IngameOverview() {
   return (

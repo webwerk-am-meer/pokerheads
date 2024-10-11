@@ -1,5 +1,5 @@
 import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
-import daily from "../../assets/images/daily_tournament.png";
+import daily from "../../assets/images/daily_tournament.webp";
 
 const tabData: InfoTabData[] = [
   {

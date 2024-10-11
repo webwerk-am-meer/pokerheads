@@ -1,6 +1,6 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import headerLogo from "../../assets/images/header_logo.png";
-import headerBackground from "../../assets/images/header_background.png";
+import headerBackground from "../../assets/images/header_background.webp";
 import { NavBar } from "./NavBar.tsx";
 import { Links } from "./Links.tsx";
 

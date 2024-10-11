@@ -11,7 +11,7 @@ import {
   PopoverTrigger,
 } from "@chakra-ui/react";
 import infoIcon from "../../assets/images/info_icon.png";
-import smartPhoneInfo from "../../assets/images/smartphone_info.png";
+import smartPhoneInfo from "../../assets/images/smartphone_info.webp";
 import { infoIcons } from "./infoIcon.tsx";
 import { InfoCard, InfoCardStack } from "./InfoCard.tsx";
 import smartPhoneInfoBackground from "../../assets/images/smartphone_info_background.svg";
@@ -70,7 +70,7 @@ export function SmartphoneInfo() {
                 </PopoverContent>
               </Popover>
             </Box>
-          ),
+          )
         )}
       </Box>
       <InfoCardStack>

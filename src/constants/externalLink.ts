@@ -1,5 +1,5 @@
 import browsers from "../assets/images/browsers.png";
-import playstore from "../assets/images/playstore.png";
+import playstore from "../assets/images/playstore.webp";
 import apple from "../assets/images/apple.png";
 
 export type ExternalLink = {
