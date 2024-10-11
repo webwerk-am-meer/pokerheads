@@ -9,7 +9,7 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path="/" element={<HomePage />} />
+        <Route path="" element={<HomePage />} />
         <Route path="/agb" element={<Agb />} />
         <Route path="/datenschutz" element={<DataSecurity />} />
         <Route path="/impressum" element={<Imprint />} />

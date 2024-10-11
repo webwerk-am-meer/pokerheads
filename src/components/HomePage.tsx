@@ -9,6 +9,7 @@ import { Footer } from "./Footer.tsx";
 import { Stack } from "@chakra-ui/react";
 
 export function HomePage() {
+  console.log("hi");
   return (
     <Stack spacing="150px">
       <Header />
@@ -18,7 +19,7 @@ export function HomePage() {
       <Tournaments />
       <IngameOverview />
       <GlobalRankings />
-      <Footer />{" "}
+      <Footer />
     </Stack>
   );
 }

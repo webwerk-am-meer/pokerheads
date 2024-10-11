@@ -7,9 +7,11 @@ export function NavText({ text, link }: { text: string; link: string }) {
 
   function onClick() {
     if (pathname !== link) {
-      navigate(link);
+      navigate(link, { preventScrollReset: true });
     }
-    document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
+    const e = document.getElementById(link);
+    console.warn(e);
+    e?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (

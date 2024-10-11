@@ -13,7 +13,7 @@ type NavigationLinks = {
 export const allLinks: NavigationLinks = {
   start: {
     name: "Start",
-    link: "/",
+    link: "",
   },
   ranking: {
     name: "Rangliste",
