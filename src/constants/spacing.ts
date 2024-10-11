@@ -2,6 +2,8 @@ export const paddingX = ["24px"];
 export const paddingTop = ["24px"];
 export const paddingBottom = ["24px"];
 
+export const mainSpacing = ["10px", "20px", "30px", "40px"];
+
 // only for remembering breakpoint values
 // const breakpoints = {
 //     base: '0em', // 0px

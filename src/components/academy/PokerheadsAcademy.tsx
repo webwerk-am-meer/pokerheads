@@ -6,12 +6,13 @@ import backgroundImage from "../../assets/images/academy_background.svg";
 import { academyTabs } from "./academyTabs.ts";
 import { RegisterButton } from "../base/RegisterButton.tsx";
 import { allLinks } from "../header/navigationLinks.ts";
+import { mainSpacing } from "../../constants/spacing.ts";
 
 export function PokerheadsAcademy() {
   const [selectedTab, setSelectedTab] = useState(academyTabs[0]);
 
   return (
-    <VStack id={allLinks.training.link} zIndex={1} gap="50px">
+    <VStack id={allLinks.training.link} zIndex={1} gap={mainSpacing}>
       <Title
         titleText="Pokerheads Akademie"
         underTitleText="verbessere dein Spiel durch tägliches Training"

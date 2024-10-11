@@ -6,9 +6,9 @@ import { BurgerMenu } from "./BurgerMenu.tsx";
 
 export function NavBar() {
   const showBurgerMenu = useResponsiveValue({ base: true, md: false });
-
+  const gap = useResponsiveValue({ base: "30px", md: "25px", lg: "50px" });
   return (
-    <Flex gap="50px">
+    <Flex gap={gap}>
       {showBurgerMenu ? (
         <BurgerMenu />
       ) : (

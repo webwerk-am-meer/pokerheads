@@ -5,12 +5,13 @@ import { RegisterButton } from "../base/RegisterButton.tsx";
 import { tournamentTabs } from "./tournamentTabs.ts";
 import { InfoTabCard } from "../base/InfoTab.tsx";
 import { useState } from "react";
+import { mainSpacing } from "../../constants/spacing.ts";
 
 export function Tournaments() {
   const [selectedTab, setSelectedTab] = useState(tournamentTabs[0]);
 
   return (
-    <VStack zIndex={1} gap="50px">
+    <VStack zIndex={1} gap={mainSpacing}>
       <Title
         titleText="Regelmäßige Turniere"
         underTitleText="Gewinne täglich Sachpreise ohne einen Einsatz zu zahlen"

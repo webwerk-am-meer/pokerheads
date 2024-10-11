@@ -2,24 +2,32 @@ import "./assets/css/main.css";
 import { useLocation } from "react-router-dom";
 import { DataSecurity } from "./components/AGB/DataSecurity.tsx";
 import { Imprint } from "./components/AGB/Imprint.tsx";
-import { Home } from "./components/HomePage.tsx";
+import { HomePage } from "./components/HomePage.tsx";
 import { Agb } from "./components/AGB/Agb.tsx";
-import { ReactNode, useEffect } from "react";
-import { Box } from "@chakra-ui/react";
+import { ReactNode, useEffect, useMemo } from "react";
+import { Box, Stack } from "@chakra-ui/react";
 import { Footer } from "./components/Footer.tsx";
 import { allDestinies } from "./components/header/navigationLinks.ts";
+import { useAppContext } from "./context/ContextProvider.tsx";
+import { HeaderBar } from "./components/header/HeaderBar.tsx";
 
 export function App() {
   const { pathname } = useLocation();
-
+  const { padding } = useAppContext();
   useEffect(() => {
     document.getElementById(pathname)?.scrollIntoView({ behavior: "smooth" });
   }, [pathname]);
 
   return (
-    <>
+    <Stack
+      minHeight="100vh"
+      padding={padding}
+      bgGradient="linear(to-b, #253C4A, #0C1F2C)"
+      gap={["20px", "20px", "15px", "10px"]}
+    >
+      <HeaderBar />
       <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
-        <Home />
+        <HomePage />
       </DisplayRoute>
       <DisplayRoute path="/agb">
         <Agb />
@@ -31,7 +39,7 @@ export function App() {
         <Imprint />
       </DisplayRoute>
       <Footer />
-    </>
+    </Stack>
   );
 }
 
@@ -44,8 +52,10 @@ function DisplayRoute({
 }) {
   const { pathname } = useLocation();
   const shouldDisplay = Array.isArray(path)
-    ? path.includes(pathname) // If path is an array, check if pathname is in the array
+    ? path.includes(pathname)
     : pathname === path;
 
-  return <Box display={shouldDisplay ? "auto" : "none"}>{children}</Box>;
+  const component = useMemo(() => children, []);
+
+  return <Box display={shouldDisplay ? "auto" : "none"}>{component}</Box>;
 }

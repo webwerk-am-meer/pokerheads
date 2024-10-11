@@ -6,11 +6,10 @@ import { Tournaments } from "./tournament/Tournaments.tsx";
 import { IngameOverview } from "./IngameOverview.tsx";
 import { GlobalRankings } from "./ranking/GlobalRankings.tsx";
 import { Stack } from "@chakra-ui/react";
-import { memo } from "react";
 
-function HomePage() {
+export function HomePage() {
   return (
-    <Stack spacing="150px">
+    <Stack spacing={["90px", "110px", "130px", "150px"]}>
       <Header />
       <OurApp />
       <PokerheadsAcademy />
@@ -21,5 +20,3 @@ function HomePage() {
     </Stack>
   );
 }
-
-export const Home = memo(HomePage);

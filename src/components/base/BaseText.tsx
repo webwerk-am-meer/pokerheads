@@ -2,7 +2,12 @@ import { Box, Text, TextProps } from "@chakra-ui/react";
 
 export function TitleText({ children, ...rest }: TextProps) {
   return (
-    <Text fontSize="48px" lineHeight="65px" fontWeight="700" {...rest}>
+    <Text
+      fontSize={["40px", "44px", "48px"]}
+      lineHeight={["50px", "60px", "65px"]}
+      fontWeight="700"
+      {...rest}
+    >
       {children}
     </Text>
   );
@@ -10,7 +15,12 @@ export function TitleText({ children, ...rest }: TextProps) {
 
 export function UnderTitleText({ children, ...rest }: TextProps) {
   return (
-    <Text fontWeight="600" fontSize="22px" lineHeight="32px" {...rest}>
+    <Text
+      fontWeight="600"
+      fontSize={["20px", "22px"]}
+      lineHeight="32px"
+      {...rest}
+    >
       {children}
     </Text>
   );

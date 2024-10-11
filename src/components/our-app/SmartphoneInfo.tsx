@@ -16,23 +16,33 @@ import { infoIcons } from "./infoIcon.tsx";
 import { InfoCard, InfoCardStack } from "./InfoCard.tsx";
 import smartPhoneInfoBackground from "../../assets/images/smartphone_info_background.svg";
 import { DescriptionText } from "../base/BaseText.tsx";
+import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 
 const width = 267;
 const height = 550;
 
 export function SmartphoneInfo() {
+  const dir = useResponsiveValue({ base: "column", md: "row" });
+  const align = useResponsiveValue({ base: "center", md: "" });
+  const gap = useResponsiveValue({ base: "15px", md: "0px" });
   return (
-    <Flex alignSelf="stretch" justify="center" position="relative">
+    <Flex
+      gap={gap}
+      direction={dir}
+      alignSelf="stretch"
+      justify="center"
+      align={align}
+      position="relative"
+    >
       <Image
         zIndex={-1}
         position="absolute"
         top="50%"
         left="50%"
-        maxHeight="100%"
         transform="translate(-50%, -50%)"
         src={smartPhoneInfoBackground}
       />
-      <InfoCardStack>
+      <InfoCardStack wrap="wrap-reverse">
         <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
         <InfoCard
           alignSelf="start"
@@ -41,8 +51,8 @@ export function SmartphoneInfo() {
         />
         <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
       </InfoCardStack>
-      <Box position="relative">
-        <Image width="267px" src={smartPhoneInfo} />
+      <Box width="267px" position="relative">
+        <Image src={smartPhoneInfo} />
         {infoIcons.map(
           ({ top, left, content, title, popoverPlacement }, index) => (
             <Box key={index}>
@@ -70,10 +80,10 @@ export function SmartphoneInfo() {
                 </PopoverContent>
               </Popover>
             </Box>
-          )
+          ),
         )}
       </Box>
-      <InfoCardStack>
+      <InfoCardStack wrap="wrap">
         <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
         <InfoCard
           alignSelf="end"

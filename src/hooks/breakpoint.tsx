@@ -9,7 +9,7 @@ type Param<T> = {
   "2xl"?: T;
 };
 
-export function useResponsiveValue<T>(values: Param<T>): T {
+export function useResponsiveValue<T>(values: Param<T>): any {
   const value = useBreakpointValue<T>(values);
   return value ?? values.base;
 }

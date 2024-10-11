@@ -2,9 +2,8 @@ import { Flex } from "@chakra-ui/react";
 import { NavText } from "./header/NavText.tsx";
 
 export function Footer() {
-  console.warn("footer");
   return (
-    <Flex justify="end" gap="50px">
+    <Flex marginTop="100px" justify="end" gap="50px">
       <NavText text="AGB" link="/agb" />
       <NavText text="Datenschutz" link="/datenschutz" />
       <NavText text="Impressum" link="/impressum" />

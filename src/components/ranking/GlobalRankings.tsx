@@ -6,12 +6,13 @@ import { InfoTabCard } from "../base/InfoTab.tsx";
 import { useState } from "react";
 import { rankingTabs } from "./rankingTabs.ts";
 import { allLinks } from "../header/navigationLinks.ts";
+import { mainSpacing } from "../../constants/spacing.ts";
 
 export function GlobalRankings() {
   const [selectedTab, setSelectedTab] = useState(rankingTabs[0]);
 
   return (
-    <VStack id={allLinks.ranking.link} zIndex={1} gap="50px">
+    <VStack id={allLinks.ranking.link} zIndex={1} gap={mainSpacing}>
       <Title
         titleText="Globale Rangliste"
         underTitleText="Teste deine Fähigkeiten in der Rangliste"
