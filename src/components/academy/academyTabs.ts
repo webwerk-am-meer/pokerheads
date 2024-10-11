@@ -1,4 +1,4 @@
-import oddsQuizImage from "../../assets/images/odds_quiz.png";
+import oddsQuizImage from "../../assets/images/odds_quiz.webp";
 import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
 
 const tabData: InfoTabData[] = [

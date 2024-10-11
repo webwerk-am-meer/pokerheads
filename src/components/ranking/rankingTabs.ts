@@ -1,5 +1,5 @@
 import { InfoTab, InfoTabData, placeholderDescription } from "../base/tab.ts";
-import cashgame from "../../assets/images/cashgame.png";
+import cashgame from "../../assets/images/cashgame.webp";
 
 const tabData: InfoTabData[] = [
   {
