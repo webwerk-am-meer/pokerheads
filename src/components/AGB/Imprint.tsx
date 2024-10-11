@@ -1,11 +1,11 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { Footer } from "../Footer.tsx";
+import { NavBar } from "../header/NavBar.tsx";
 
 export function Imprint() {
   return (
     <Stack>
+      <NavBar />
       <Text>Imprint</Text>
-      <Footer />
     </Stack>
   );
 }

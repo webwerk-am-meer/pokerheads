@@ -1,17 +1,21 @@
 import { Text } from "@chakra-ui/react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export function NavText({ text, link }: { text: string; link: string }) {
+export function NavText({
+  text,
+  link,
+  onSelect,
+}: {
+  text: string;
+  link: string;
+  onSelect?: () => void;
+}) {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
 
   function onClick() {
-    if (pathname !== link) {
-      navigate(link, { preventScrollReset: true });
-    }
-    const e = document.getElementById(link);
-    console.warn(e);
-    e?.scrollIntoView({ behavior: "smooth" });
+    onSelect?.();
+    navigate(link);
+    document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (

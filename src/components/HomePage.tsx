@@ -5,11 +5,10 @@ import { DevicesOverview } from "./DevicesOverview.tsx";
 import { Tournaments } from "./tournament/Tournaments.tsx";
 import { IngameOverview } from "./IngameOverview.tsx";
 import { GlobalRankings } from "./ranking/GlobalRankings.tsx";
-import { Footer } from "./Footer.tsx";
 import { Stack } from "@chakra-ui/react";
+import { memo } from "react";
 
-export function HomePage() {
-  console.log("hi");
+function HomePage() {
   return (
     <Stack spacing="150px">
       <Header />
@@ -19,7 +18,8 @@ export function HomePage() {
       <Tournaments />
       <IngameOverview />
       <GlobalRankings />
-      <Footer />
     </Stack>
   );
 }
+
+export const Home = memo(HomePage);
