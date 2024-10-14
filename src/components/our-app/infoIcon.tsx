@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import { PlacementWithLogical } from "@chakra-ui/react";
 
 type InfoIcon = {
-  top: number;
-  left: number;
+  top: string;
+  left: string;
   content: ReactNode;
   title: string;
   popoverPlacement?: PlacementWithLogical;
@@ -12,92 +12,92 @@ type InfoIcon = {
 export const infoIcons: InfoIcon[] = [
   {
     title: "FAQ?",
-    top: 78,
-    left: 241,
+    top: "14.188%",
+    left: "90.262%",
     content: "Oft gestellte Fragen",
     popoverPlacement: "right-end",
   },
   {
     title: "Elo-match",
-    top: 165,
-    left: 119,
+    top: "30%",
+    left: "44.569%",
     content: "Spiele ein Elo-Match...",
     popoverPlacement: "left-end",
   },
   {
     title: "Cashgame",
-    top: 165,
-    left: 241,
+    top: "30%",
+    left: "90.262%",
     content: "Ein Cashgame ist...",
     popoverPlacement: "right-end",
   },
   {
     title: "Monatspreis",
-    top: 210,
-    left: 119,
+    top: "38.181%",
+    left: "44.569%",
     content: "Sieh dir den aktuellen Monatspreis an...",
     popoverPlacement: "left-start",
   },
   {
     title: "Daily Chipleader",
-    top: 210,
-    left: 241,
+    top: "38.181%",
+    left: "90.262%",
     content: "...",
     popoverPlacement: "right-start",
   },
   {
     title: "Basic-Quiz",
-    top: 302,
-    left: 119,
+    top: "54.909%",
+    left: "44.569%",
     content: "...",
     popoverPlacement: "left-end",
   },
   {
     title: "Odds-Quiz",
-    top: 302,
-    left: 241,
+    top: "54.909%",
+    left: "90.262%",
     content: "...",
     popoverPlacement: "right-end",
   },
   {
     title: "Training",
-    top: 333,
-    left: 119,
+    top: "60.545%",
+    left: "44.569%",
     content: "...",
     popoverPlacement: "bottom-end",
   },
   {
     title: "Hand-Analyse",
-    top: 333,
-    left: 241,
+    top: "60.545%",
+    left: "90.262%",
     content: "...",
     popoverPlacement: "bottom-start",
   },
   {
     title: "Home",
-    top: 494,
-    left: 56,
+    top: "89.818%",
+    left: "20.974%",
     content: "...",
     popoverPlacement: "top",
   },
   {
     title: "Kontakte?",
-    top: 494,
-    left: 115,
+    top: "89.818%",
+    left: "43.071%",
     content: "...",
     popoverPlacement: "top",
   },
   {
     title: "Profil",
-    top: 494,
-    left: 166,
+    top: "89.818%",
+    left: "62.172%",
     content: "...",
     popoverPlacement: "top",
   },
   {
     title: "Rangliste",
-    top: 494,
-    left: 225,
+    top: "89.818%",
+    left: "84.267%",
     content: "...",
     popoverPlacement: "top",
   },

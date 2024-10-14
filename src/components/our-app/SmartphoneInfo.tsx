@@ -18,9 +18,6 @@ import smartPhoneInfoBackground from "../../assets/images/smartphone_info_backgr
 import { DescriptionText } from "../base/BaseText.tsx";
 import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 
-const width = 267;
-const height = 550;
-
 export function SmartphoneInfo() {
   const dir = useResponsiveValue({ base: "column", md: "row" });
   const align = useResponsiveValue({ base: "center", md: "" });
@@ -62,8 +59,8 @@ export function SmartphoneInfo() {
                     height="18px"
                     width="18px"
                     position="absolute"
-                    top={`${(top / height) * 100}%`}
-                    left={`${(left / width) * 100}%`}
+                    top={top}
+                    left={left}
                     cursor="pointer"
                     src={infoIcon}
                   />
