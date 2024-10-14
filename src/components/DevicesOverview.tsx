@@ -1,4 +1,4 @@
-import { Image, VStack } from "@chakra-ui/react";
+import { Box, Image, VStack } from "@chakra-ui/react";
 import { Title } from "./base/BaseText.tsx";
 import { CallToAction } from "./base/CallToAction.tsx";
 import background from "../assets/images/devices_background.webp";
@@ -11,7 +11,9 @@ export function DevicesOverview() {
         titleText="Erlebe Heads-Up Poker"
         underTitleText="auf allen Geräten verfügbar"
       />
-      <Image maxWidth="1000px" src={background} />
+      <Box maxWidth="1000px">
+        <Image src={background} />
+      </Box>
       <CallToAction />
     </VStack>
   );

@@ -28,7 +28,12 @@ export function UnderTitleText({ children, ...rest }: TextProps) {
 
 export function DescriptionText({ children }: TextProps) {
   return (
-    <Text fontWeight="500" fontSize="18px" lineHeight="26px">
+    <Text
+      fontWeight="500"
+      fontSize={["16px", "17px", "18px"]}
+      lineHeight={["24px", "25px", "26px"]}
+      align={["center", "center", "left"]}
+    >
       {children}
     </Text>
   );

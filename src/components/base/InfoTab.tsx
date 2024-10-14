@@ -1,4 +1,5 @@
-import { Center, Text } from "@chakra-ui/react";
+import { Center, CenterProps, Text } from "@chakra-ui/react";
+import { useRef } from "react";
 
 type Props = {
   isSelected: boolean;
@@ -6,20 +7,36 @@ type Props = {
   onClick?: () => void;
 };
 
-export function InfoTabCard({ tabText, isSelected, onClick }: Props) {
+export function InfoTabCard({
+  tabText,
+  isSelected,
+  onClick,
+  ...rest
+}: Props & CenterProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
     <Center
+      ref={ref}
       _hover={{
         bgColor: "hover",
       }}
       transition="background-color 0.1s"
-      onMouseDown={onClick}
+      onClick={() => {
+        ref.current?.scrollIntoView({
+          inline: "center",
+          behavior: "smooth",
+          block: "nearest",
+        });
+        onClick?.();
+      }}
       cursor="pointer"
       borderRadius="10px"
       width="190px"
       height="50px"
       border="white 1px solid"
       bgColor={isSelected ? "dark" : "light"}
+      {...rest}
     >
       <Text fontWeight="700" fontSize="16px" lineHeight="23px">
         {tabText}

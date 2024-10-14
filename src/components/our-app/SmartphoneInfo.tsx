@@ -70,7 +70,6 @@ export function SmartphoneInfo() {
                     src={infoIcon}
                   />
                 </PopoverTrigger>
-
                 <PopoverContent bgColor="dark">
                   <PopoverArrow bgColor="dark" />
                   <PopoverCloseButton color="white" />

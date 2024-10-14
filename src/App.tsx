@@ -20,24 +20,29 @@ export function App() {
 
   return (
     <Stack
+      overflow="clip"
       minHeight="100vh"
       padding={padding}
+      justify="space-between"
       bgGradient="linear(to-b, #253C4A, #0C1F2C)"
       gap={["20px", "20px", "15px", "10px"]}
     >
-      <HeaderBar />
-      <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
-        <HomePage />
-      </DisplayRoute>
-      <DisplayRoute path="/agb">
-        <Agb />
-      </DisplayRoute>
-      <DisplayRoute path="/datenschutz">
-        <DataSecurity />
-      </DisplayRoute>
-      <DisplayRoute path="/impressum">
-        <Imprint />
-      </DisplayRoute>
+      <Box>
+        <HeaderBar />
+        <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
+          <HomePage />
+        </DisplayRoute>
+        <DisplayRoute path="/agb">
+          <Agb />
+        </DisplayRoute>
+        <DisplayRoute path="/datenschutz">
+          <DataSecurity />
+        </DisplayRoute>
+        <DisplayRoute path="/impressum">
+          <Imprint />
+        </DisplayRoute>
+      </Box>
+
       <Footer />
     </Stack>
   );
