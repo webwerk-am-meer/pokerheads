@@ -53,7 +53,12 @@ export function SmartphoneInfo() {
         {infoIcons.map(
           ({ top, left, content, title, popoverPlacement }, index) => (
             <Box key={index}>
-              <Popover placement={popoverPlacement} trigger="hover">
+              <Popover
+                isLazy
+                lazyBehavior="keepMounted"
+                placement={popoverPlacement}
+                trigger="hover"
+              >
                 <PopoverTrigger>
                   <Image
                     height="18px"
@@ -65,6 +70,7 @@ export function SmartphoneInfo() {
                     src={infoIcon}
                   />
                 </PopoverTrigger>
+
                 <PopoverContent bgColor="dark">
                   <PopoverArrow bgColor="dark" />
                   <PopoverCloseButton color="white" />
