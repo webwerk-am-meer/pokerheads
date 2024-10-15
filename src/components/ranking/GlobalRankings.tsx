@@ -35,10 +35,20 @@ export function GlobalRankings() {
       />
       {displayHorizontal && (
         <Box
+          sx={{
+            "::-webkit-scrollbar": {
+              bgColor: "#0c202d",
+              borderRadius: "10px",
+              height: "10px",
+            },
+            "::-webkit-scrollbar-thumb": {
+              bgColor: "#5e93a3",
+              borderRadius: "10px",
+            },
+          }}
           paddingBottom={3}
           width="100%"
           overflowX="auto"
-          sx={{ scrollbarWidth: "thin" }}
         >
           <Flex width="max-content" justify="center">
             {displayHorizontal && <LocalTabs />}

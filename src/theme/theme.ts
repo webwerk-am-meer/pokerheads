@@ -18,8 +18,11 @@ export const customTheme = extendTheme({
   },
   styles: {
     global: {
-      "*": {
-        scrollbarColor: "#5e93a3 #0c202d",
+      "*::-webkit-scrollbar": {
+        bgColor: "#0c202d",
+      },
+      "*::-webkit-scrollbar-thumb": {
+        bgColor: "#5e93a3",
       },
     },
   },

@@ -1,5 +1,13 @@
-
 @font-face {
     font-family: "Jost";
     src: url("../fonts/jost/Jost-VariableFont_wght.ttf") format("truetype");
 }
+
+
+/*::-webkit-scrollbar {*/
+/*    background-color: #0c202d;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*    background-color: #5e93a3;*/
+/*}*/
