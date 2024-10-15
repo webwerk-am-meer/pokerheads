@@ -24,10 +24,10 @@ export function App() {
       padding={["10px", "15px", "20px", "25px"]}
       justify="space-between"
       bgGradient="linear(to-b, #253C4A, #0C1F2C)"
-      gap={["20px", "20px", "15px", "10px"]}
+      gap={["40px", "30px", "20px", "10px"]}
     >
+      <HeaderBar />
       <Box>
-        <HeaderBar />
         <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
           <HomePage />
         </DisplayRoute>
@@ -41,7 +41,6 @@ export function App() {
           <Imprint />
         </DisplayRoute>
       </Box>
-
       <Footer />
     </Stack>
   );

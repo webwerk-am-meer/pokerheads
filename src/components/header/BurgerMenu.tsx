@@ -26,8 +26,7 @@ export function BurgerMenu() {
         <DrawerOverlay />
         <DrawerContent
           position="relative"
-          gap={4}
-          justifyContent="space-between"
+          gap="50px"
           alignItems="center"
           padding="24px"
           bgColor="light"

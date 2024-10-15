@@ -11,7 +11,7 @@ export function Header() {
         direction={["column", "column", "row"]}
         justify="space-between"
       >
-        <Stack minWidth={["", "", "450px"]} gap={["8px", "13px", "18px"]}>
+        <Stack minWidth={["", "", "400px"]} gap={["8px", "13px", "18px"]}>
           <Text
             align={["center", "center", "left"]}
             maxWidth="745px"
@@ -30,10 +30,7 @@ export function Header() {
             Elo-basiertes Ranglisten Poker mit täglichen Gewinnen
           </Text>
         </Stack>
-        <Box
-          maxWidth={["", "320px", "480px"]}
-          height={["300px", "300px", "auto"]}
-        >
+        <Box maxWidth={["", "", "480px"]} height={["400px", "500px", "auto"]}>
           <Image objectFit="contain" height="100%" src={headerBackground} />
         </Box>
       </Flex>

@@ -7,7 +7,7 @@ export function HeaderBar() {
     <Flex justify="space-between">
       <Image
         objectFit="scale-down"
-        width={["220px", "250px", "300px", "425px"]}
+        width={["250px", "350px", "350px", "425px"]}
         src={headerLogo}
       />
       <NavBar />

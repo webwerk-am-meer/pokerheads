@@ -28,6 +28,7 @@ export function SmartphoneInfo() {
       position="relative"
     >
       <Image
+        display={["none", "block"]}
         zIndex={-1}
         position="absolute"
         top="50%"

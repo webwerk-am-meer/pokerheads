@@ -8,7 +8,12 @@ export function Links() {
       <Text fontWeight="700" fontSize="24px" lineHeight="35px" align="center">
         Ein Account, für alle Plattformen
       </Text>
-      <Flex wrap="wrap" justify="center" gap="24px">
+      <Flex
+        align="stretch"
+        wrap="wrap"
+        justify="center"
+        gap={["18px", "20px", "22px", "24px"]}
+      >
         {externalLinks.map((linkInfo, index) => (
           <ExternalLinkCard {...linkInfo} variant="large" key={index} />
         ))}

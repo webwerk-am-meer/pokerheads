@@ -9,7 +9,7 @@ import { Stack } from "@chakra-ui/react";
 
 export function HomePage() {
   return (
-    <Stack spacing={["90px", "110px", "130px", "150px"]}>
+    <Stack spacing={["60px", "90px", "120px", "150px"]}>
       <Header />
       <OurApp />
       <PokerheadsAcademy />
