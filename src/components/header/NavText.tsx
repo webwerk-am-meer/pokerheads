@@ -1,6 +1,5 @@
 import { Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 
 export function NavText({
   text,
@@ -12,7 +11,7 @@ export function NavText({
   onSelect?: () => void;
 }) {
   const navigate = useNavigate();
-  const fontSize = useResponsiveValue({ base: "20px", md: "22px", lg: "24px" });
+
   function onClick() {
     onSelect?.();
     if (link === undefined) return;
@@ -28,7 +27,7 @@ export function NavText({
       }}
       cursor="pointer"
       fontWeight="600"
-      fontSize={fontSize}
+      fontSize={["20px", "20px", "22px", "24px"]}
       lineHeight="35px"
     >
       {text}

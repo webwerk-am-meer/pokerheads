@@ -1,6 +1,5 @@
 import { Stack, StackProps, Text, VStack } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 
 type CardProps = StackProps & {
   topText?: string;
@@ -12,13 +11,10 @@ type CardStackProps = StackProps & {
 };
 
 export function InfoCardStack({ children, ...rest }: CardStackProps) {
-  const dir = useResponsiveValue({ base: "row", md: "column" });
-  const maxWidth = useResponsiveValue({ base: "650px", md: "450px" });
-
   return (
     <Stack
-      direction={dir}
-      maxWidth={maxWidth}
+      direction={["row", "row", "column"]}
+      maxWidth={["650px", "650px", "450px"]}
       flexGrow={1}
       gap="15px"
       align="center"
@@ -31,9 +27,6 @@ export function InfoCardStack({ children, ...rest }: CardStackProps) {
 }
 
 export function InfoCard({ topText, bottomText, ...rest }: CardProps) {
-  const width = useResponsiveValue({ base: "210px", lg: "260px" });
-  const height = useResponsiveValue({ base: "65px", lg: "76px" });
-  const fontSize = useResponsiveValue({ base: "16px", lg: "20px" });
   return (
     <VStack
       justify="center"
@@ -41,8 +34,8 @@ export function InfoCard({ topText, bottomText, ...rest }: CardProps) {
       borderRadius="3em"
       bgColor="white"
       border="3px solid #1E1E1E"
-      width={width}
-      height={height}
+      width={["210px", "210px", "210px", "260px"]}
+      height={["65px", "65px", "65px", "76px"]}
       gap="-10px"
       boxShadow="4px 4px 20px 0px #00000040"
       {...rest}
@@ -50,7 +43,7 @@ export function InfoCard({ topText, bottomText, ...rest }: CardProps) {
       <Text
         color="#1E1E1E"
         fontWeight="800"
-        fontSize={fontSize}
+        fontSize={["16px", "16px", "16px", "20px"]}
         lineHeight="29px"
       >
         {topText}
@@ -58,7 +51,7 @@ export function InfoCard({ topText, bottomText, ...rest }: CardProps) {
       <Text
         color="#1E1E1E"
         fontWeight="500"
-        fontSize={fontSize}
+        fontSize={["16px", "16px", "16px", "20px"]}
         lineHeight="29px"
       >
         {bottomText}

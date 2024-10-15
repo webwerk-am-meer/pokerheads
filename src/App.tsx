@@ -8,12 +8,11 @@ import { ReactNode, useEffect, useMemo } from "react";
 import { Box, Stack } from "@chakra-ui/react";
 import { Footer } from "./components/Footer.tsx";
 import { allDestinies } from "./components/header/navigationLinks.ts";
-import { useAppContext } from "./context/ContextProvider.tsx";
 import { HeaderBar } from "./components/header/HeaderBar.tsx";
 
 export function App() {
   const { pathname } = useLocation();
-  const { padding } = useAppContext();
+
   useEffect(() => {
     document.getElementById(pathname)?.scrollIntoView({ behavior: "smooth" });
   }, [pathname]);
@@ -22,7 +21,7 @@ export function App() {
     <Stack
       overflow="clip"
       minHeight="100vh"
-      padding={padding}
+      padding={["10px", "15px", "20px", "25px"]}
       justify="space-between"
       bgGradient="linear(to-b, #253C4A, #0C1F2C)"
       gap={["20px", "20px", "15px", "10px"]}

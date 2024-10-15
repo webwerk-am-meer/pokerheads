@@ -1,14 +1,13 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, useBreakpointValue } from "@chakra-ui/react";
 import { allDestinies } from "./navigationLinks.ts";
 import { NavText } from "./NavText.tsx";
-import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 import { BurgerMenu } from "./BurgerMenu.tsx";
 
 export function NavBar() {
-  const showBurgerMenu = useResponsiveValue({ base: true, md: false });
-  const gap = useResponsiveValue({ base: "30px", md: "25px", lg: "50px" });
+  const showBurgerMenu = useBreakpointValue({ base: true, md: false });
+
   return (
-    <Flex gap={gap}>
+    <Flex gap={["30px", "30px", "25px", "50px"]}>
       {showBurgerMenu ? (
         <BurgerMenu />
       ) : (

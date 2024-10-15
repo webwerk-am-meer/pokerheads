@@ -70,7 +70,11 @@ export function GlobalRankings() {
             <Image objectFit="cover" height="100%" src={selectedTab.image} />
           </Box>
         </Flex>
-        <Stack justify="space-evenly" gap={["20px", "50px", "80px"]}>
+        <Stack
+          justify="space-evenly"
+          gap={["20px", "50px", "80px"]}
+          maxWidth="550px"
+        >
           <DescriptionText>{selectedTab.description}</DescriptionText>
           <RegisterButton>JETZT KOSTENLOS REGISTRIEREN</RegisterButton>
         </Stack>

@@ -16,19 +16,15 @@ import { infoIcons } from "./infoIcon.tsx";
 import { InfoCard, InfoCardStack } from "./InfoCard.tsx";
 import smartPhoneInfoBackground from "../../assets/images/smartphone_info_background.svg";
 import { DescriptionText } from "../base/BaseText.tsx";
-import { useResponsiveValue } from "../../hooks/breakpoint.tsx";
 
 export function SmartphoneInfo() {
-  const dir = useResponsiveValue({ base: "column", md: "row" });
-  const align = useResponsiveValue({ base: "center", md: "" });
-  const gap = useResponsiveValue({ base: "15px", md: "0px" });
   return (
     <Flex
-      gap={gap}
-      direction={dir}
+      gap={["15px", "15px", "0px"]}
+      direction={["column", "column", "row"]}
       alignSelf="stretch"
       justify="center"
-      align={align}
+      align={["center", "center", "stretch"]}
       position="relative"
     >
       <Image
