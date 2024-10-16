@@ -32,7 +32,7 @@ export function InfoTabCard({
       }}
       cursor="pointer"
       borderRadius="10px"
-      width="190px"
+      width={["150px", "150px", "190px"]}
       height="50px"
       border="white 1px solid"
       bgColor={isSelected ? "dark" : "light"}

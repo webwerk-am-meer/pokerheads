@@ -1,19 +1,20 @@
-import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import headerBackground from "../../assets/images/header_background.webp";
 import { Links } from "./Links.tsx";
 
 export function Header() {
   return (
-    <Stack>
+    <VStack>
       <Flex
+        maxWidth="1300px"
         align="center"
         gap={["15px", "20px", "25px", "40px"]}
-        direction={["column", "column", "row"]}
+        direction={["column", "column", "column", "row"]}
         justify="space-between"
       >
-        <Stack minWidth={["", "", "450px"]} gap={["8px", "13px", "18px"]}>
+        <Stack minWidth={["", "", "525px"]} gap={["8px", "13px", "18px"]}>
           <Text
-            align={["center", "center", "left"]}
+            align={["center", "center", "center", "left"]}
             maxWidth="745px"
             fontWeight="600"
             fontSize={["30px", "40px", "50px", "64px"]}
@@ -22,7 +23,7 @@ export function Header() {
             Erlebe Heads-Up Poker, auf eine ganz neue Art!
           </Text>
           <Text
-            align={["center", "center", "left"]}
+            align={["center", "center", "center", "left"]}
             fontWeight="600"
             fontSize={["20px", "21px", "22px", "25px"]}
             lineHeight={["25px", "30px", "35px"]}
@@ -31,14 +32,16 @@ export function Header() {
           </Text>
         </Stack>
 
-        <Box
-          maxWidth={["", "320px", "480px"]}
-          height={["300px", "300px", "auto"]}
-        >
-          <Image objectFit="contain" height="100%" src={headerBackground} />
+        <Box maxWidth={["481px"]} maxHeight="556px">
+          <Image
+            objectFit="contain"
+            height="100%"
+            width="100%"
+            src={headerBackground}
+          />
         </Box>
       </Flex>
       <Links />
-    </Stack>
+    </VStack>
   );
 }

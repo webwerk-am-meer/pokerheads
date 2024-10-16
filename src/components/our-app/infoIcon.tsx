@@ -7,6 +7,7 @@ type InfoIcon = {
   content: ReactNode;
   title: string;
   popoverPlacement?: PlacementWithLogical;
+  smallPopoverPlacement?: PlacementWithLogical;
 };
 
 export const infoIcons: InfoIcon[] = [
@@ -16,6 +17,7 @@ export const infoIcons: InfoIcon[] = [
     left: "90.262%",
     content: "Oft gestellte Fragen",
     popoverPlacement: "right-end",
+    smallPopoverPlacement: "left-end",
   },
   {
     title: "Elo-match",
@@ -23,6 +25,7 @@ export const infoIcons: InfoIcon[] = [
     left: "44.569%",
     content: "Spiele ein Elo-Match...",
     popoverPlacement: "left-end",
+    smallPopoverPlacement: "top",
   },
   {
     title: "Cashgame",
@@ -30,6 +33,7 @@ export const infoIcons: InfoIcon[] = [
     left: "90.262%",
     content: "Ein Cashgame ist...",
     popoverPlacement: "right-end",
+    smallPopoverPlacement: "top-end",
   },
   {
     title: "Monatspreis",
@@ -37,6 +41,7 @@ export const infoIcons: InfoIcon[] = [
     left: "44.569%",
     content: "Sieh dir den aktuellen Monatspreis an...",
     popoverPlacement: "left-start",
+    smallPopoverPlacement: "bottom",
   },
   {
     title: "Daily Chipleader",
@@ -44,6 +49,7 @@ export const infoIcons: InfoIcon[] = [
     left: "90.262%",
     content: "...",
     popoverPlacement: "right-start",
+    smallPopoverPlacement: "bottom-end",
   },
   {
     title: "Basic-Quiz",
@@ -51,6 +57,7 @@ export const infoIcons: InfoIcon[] = [
     left: "44.569%",
     content: "...",
     popoverPlacement: "left-end",
+    smallPopoverPlacement: "top",
   },
   {
     title: "Odds-Quiz",
@@ -58,6 +65,7 @@ export const infoIcons: InfoIcon[] = [
     left: "90.262%",
     content: "...",
     popoverPlacement: "right-end",
+    smallPopoverPlacement: "top-end",
   },
   {
     title: "Training",

@@ -9,6 +9,7 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import infoIcon from "../../assets/images/info_icon.png";
 import smartPhoneInfo from "../../assets/images/smartphone_info.webp";
@@ -18,6 +19,8 @@ import smartPhoneInfoBackground from "../../assets/images/smartphone_info_backgr
 import { DescriptionText } from "../base/BaseText.tsx";
 
 export function SmartphoneInfo() {
+  const small = useBreakpointValue({ base: true, md: false });
+
   return (
     <Flex
       gap={["15px", "15px", "0px"]}
@@ -48,12 +51,22 @@ export function SmartphoneInfo() {
       <Box width="267px" position="relative">
         <Image src={smartPhoneInfo} />
         {infoIcons.map(
-          ({ top, left, content, title, popoverPlacement }, index) => (
+          (
+            {
+              top,
+              left,
+              content,
+              title,
+              popoverPlacement,
+              smallPopoverPlacement,
+            },
+            index,
+          ) => (
             <Box key={index}>
               <Popover
                 isLazy
                 lazyBehavior="keepMounted"
-                placement={popoverPlacement}
+                placement={small ? smallPopoverPlacement : popoverPlacement}
                 trigger="hover"
               >
                 <PopoverTrigger>

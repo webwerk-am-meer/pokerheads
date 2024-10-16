@@ -17,8 +17,6 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const displayTabsOnTop = useBreakpointValue({ base: true, lg: false });
 
-  const baseWrap = "wrap";
-
   return (
     <>
       {displayTabsOnTop && (
@@ -44,7 +42,7 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
         </Flex>
       )}
       <Flex
-        wrap={[baseWrap, baseWrap, baseWrap, "nowrap"]}
+        wrap={["wrap", "wrap", "wrap", "nowrap"]}
         justify="center"
         rowGap="20px"
         dir={side === "left" ? "ltr" : "rtl"}
@@ -57,6 +55,7 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
           position="relative"
         >
           <Image
+            display={["none", "none", "none", "block"]}
             transform="translate(-45%, -50%)"
             top="50%"
             left="50%"
@@ -64,10 +63,7 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
             position="absolute"
             src={backgroundImage}
           />
-          <Box
-            width={["223px", "250px", "279px"]}
-            height={["394px", "444px", "494px"]}
-          >
+          <Box width={["250px", "279px"]} height={["444px", "494px"]}>
             <Image
               width="100%"
               height="100%"
