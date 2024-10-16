@@ -3,17 +3,23 @@ import { useState } from "react";
 import { Box, Flex, Image, Stack, useBreakpointValue } from "@chakra-ui/react";
 import { InfoTabCard } from "./InfoTab.tsx";
 import backgroundImage from "../../assets/images/tournaments_background.svg";
+import noImage from "../../assets/images/no-image.png";
 import { DescriptionText } from "./BaseText.tsx";
 import { RegisterButton } from "./RegisterButton.tsx";
 
 type Props = {
   tabs: InfoTab[];
-  side: "left" | "right";
-  imageSide: "left" | "right";
+  imageAndTabPlacement: "left" | "right";
+  imagePlacement: "left" | "right";
   offsetFunc?: (index: number, length: number) => number;
 };
 
-export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
+export function TabDisplay({
+  tabs,
+  imageAndTabPlacement,
+  offsetFunc,
+  imagePlacement,
+}: Props) {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const displayTabsOnTop = useBreakpointValue({ base: true, lg: false });
 
@@ -45,12 +51,12 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
         wrap={["wrap", "wrap", "wrap", "nowrap"]}
         justify="center"
         rowGap="20px"
-        dir={side === "left" ? "ltr" : "rtl"}
+        dir={imageAndTabPlacement === "left" ? "ltr" : "rtl"}
         columnGap={["30px", "40px", "50px", "60px", "90px"]}
         alignSelf="stretch"
       >
         <Flex
-          dir={imageSide === "left" ? "ltr" : "rtl"}
+          dir={imagePlacement === "left" ? "ltr" : "rtl"}
           align="center"
           position="relative"
         >
@@ -68,6 +74,7 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
               width="100%"
               height="100%"
               objectFit="contain"
+              fallbackSrc={noImage}
               src={selectedTab.image}
             />
           </Box>
@@ -97,7 +104,6 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
             }
           >
             <InfoTabCard
-              key={index}
               onClick={() => setSelectedTab(tabInfo)}
               isSelected={selectedTab.id === tabInfo.id}
               tabText={tabInfo.tabText}
@@ -113,8 +119,8 @@ export function TabDisplay({ tabs, side, offsetFunc, imageSide }: Props) {
       <>
         {tabs.map((tabInfo, index, list) => (
           <Box
-            marginRight={index === list.length - 1 ? "auto" : ""}
-            marginLeft={index === 0 ? "auto" : ""}
+            marginRight={index === list.length - 1 ? "auto" : undefined}
+            marginLeft={index === 0 ? "auto" : undefined}
             key={index}
           >
             <InfoTabCard

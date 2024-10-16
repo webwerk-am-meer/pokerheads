@@ -3,10 +3,6 @@ import { Button, ButtonProps } from "@chakra-ui/react";
 export function RegisterButton({ children }: ButtonProps) {
   return (
     <Button
-      sx={{
-        textWrap: "wrap",
-      }}
-      wordBreak="break-all"
       fontWeight="700"
       fontSize="15px"
       lineHeight="21.5px"

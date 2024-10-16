@@ -17,7 +17,7 @@ export const infoIcons: InfoIcon[] = [
     left: "90.262%",
     content: "Oft gestellte Fragen",
     popoverPlacement: "right-end",
-    smallPopoverPlacement: "left-end",
+    smallPopoverPlacement: "top",
   },
   {
     title: "Elo-match",

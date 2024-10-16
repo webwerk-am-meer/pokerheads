@@ -9,7 +9,7 @@ import { Box, Stack } from "@chakra-ui/react";
 import { Footer } from "./components/Footer.tsx";
 import { allDestinies } from "./components/header/navigationLinks.ts";
 import { HeaderBar } from "./components/header/HeaderBar.tsx";
-import { BreakpointDisplay } from "./components/base/BreakpointDisplay.tsx";
+import { BreakpointText } from "./components/base/BreakpointText.tsx";
 
 export function App() {
   const { pathname } = useLocation();
@@ -27,7 +27,6 @@ export function App() {
       bgGradient="linear(to-b, #253C4A, #0C1F2C)"
       gap={["40px", "30px", "20px", "10px"]}
     >
-      <BreakpointDisplay />
       <HeaderBar />
       <Box>
         <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
@@ -44,6 +43,7 @@ export function App() {
         </DisplayRoute>
       </Box>
       <Footer />
+      <BreakpointText />
     </Stack>
   );
 }

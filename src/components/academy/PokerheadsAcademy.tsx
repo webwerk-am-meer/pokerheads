@@ -12,7 +12,11 @@ export function PokerheadsAcademy() {
         titleText="Pokerheads Akademie"
         underTitleText="verbessere dein Spiel durch tägliches Training"
       />
-      <TabDisplay tabs={academyTabs} side="left" imageSide="left" />
+      <TabDisplay
+        tabs={academyTabs}
+        imageAndTabPlacement="left"
+        imagePlacement="right"
+      />
     </VStack>
   );
 }

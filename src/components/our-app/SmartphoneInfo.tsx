@@ -27,7 +27,7 @@ export function SmartphoneInfo() {
       direction={["column", "column", "row"]}
       alignSelf="stretch"
       justify="center"
-      align={["center", "center", "stretch"]}
+      align={["stretch", "stretch", "stretch"]}
       position="relative"
     >
       <Image
@@ -39,7 +39,7 @@ export function SmartphoneInfo() {
         transform="translate(-50%, -50%)"
         src={smartPhoneInfoBackground}
       />
-      <InfoCardStack wrap="wrap-reverse">
+      <InfoCardStack display={["none", "flex"]} wrap="wrap-reverse">
         <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
         <InfoCard
           alignSelf="start"
@@ -48,53 +48,64 @@ export function SmartphoneInfo() {
         />
         <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
       </InfoCardStack>
-      <Box width="267px" position="relative">
-        <Image src={smartPhoneInfo} />
-        {infoIcons.map(
-          (
-            {
-              top,
-              left,
-              content,
-              title,
-              popoverPlacement,
-              smallPopoverPlacement,
-            },
-            index,
-          ) => (
-            <Box key={index}>
-              <Popover
-                isLazy
-                lazyBehavior="keepMounted"
-                placement={small ? smallPopoverPlacement : popoverPlacement}
-                trigger="hover"
-              >
-                <PopoverTrigger>
-                  <Image
-                    height="18px"
-                    width="18px"
-                    position="absolute"
-                    top={top}
-                    left={left}
-                    cursor="pointer"
-                    src={infoIcon}
-                  />
-                </PopoverTrigger>
-                <PopoverContent bgColor="dark">
-                  <PopoverArrow bgColor="dark" />
-                  <PopoverCloseButton color="white" />
-                  <PopoverHeader>
-                    <DescriptionText>{title}</DescriptionText>
-                  </PopoverHeader>
-                  <PopoverBody>
-                    <DescriptionText>{content}</DescriptionText>
-                  </PopoverBody>
-                </PopoverContent>
-              </Popover>
-            </Box>
-          ),
-        )}
-      </Box>
+      <Flex justify="center">
+        <Box position="relative" width="267px">
+          <Image src={smartPhoneInfo} />
+          {infoIcons.map(
+            (
+              {
+                top,
+                left,
+                content,
+                title,
+                popoverPlacement,
+                smallPopoverPlacement,
+              },
+              index,
+            ) => (
+              <Box key={index}>
+                <Popover
+                  isLazy
+                  lazyBehavior="keepMounted"
+                  placement={small ? smallPopoverPlacement : popoverPlacement}
+                  trigger="hover"
+                >
+                  <PopoverTrigger>
+                    <Image
+                      height="18px"
+                      width="18px"
+                      position="absolute"
+                      top={top}
+                      left={left}
+                      cursor="pointer"
+                      src={infoIcon}
+                    />
+                  </PopoverTrigger>
+                  <PopoverContent bgColor="dark">
+                    <PopoverArrow bgColor="dark" />
+                    <PopoverCloseButton color="white" />
+                    <PopoverHeader>
+                      <DescriptionText>{title}</DescriptionText>
+                    </PopoverHeader>
+                    <PopoverBody>
+                      <DescriptionText>{content}</DescriptionText>
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
+              </Box>
+            ),
+          )}
+        </Box>
+      </Flex>
+      <InfoCardStack display={["flex", "none"]} wrap="wrap-reverse">
+        <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
+        <InfoCard
+          alignSelf="start"
+          topText="Lerne"
+          bottomText="die Odds kennen"
+        />
+        <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
+      </InfoCardStack>
       <InfoCardStack wrap="wrap">
         <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
         <InfoCard

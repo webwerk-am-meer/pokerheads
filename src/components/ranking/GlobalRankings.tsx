@@ -14,8 +14,8 @@ export function GlobalRankings() {
       />
       <TabDisplay
         tabs={rankingTabs}
-        side="left"
-        imageSide="right"
+        imageAndTabPlacement="left"
+        imagePlacement="right"
         offsetFunc={(index) => 10 * (index + 1)}
       />
     </VStack>

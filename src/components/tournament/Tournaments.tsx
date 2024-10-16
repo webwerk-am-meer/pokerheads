@@ -15,8 +15,8 @@ export function Tournaments() {
       <TabDisplay
         offsetFunc={(index, length) => 9 * (length - index)}
         tabs={tournamentTabs}
-        side="right"
-        imageSide="right"
+        imageAndTabPlacement="right"
+        imagePlacement="right"
       />
     </VStack>
   );

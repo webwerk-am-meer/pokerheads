@@ -1,6 +1,6 @@
 import { Text, useBreakpoint } from "@chakra-ui/react";
 
-export function BreakpointDisplay() {
+export function BreakpointText() {
   const breakpoint = useBreakpoint();
 
   return (
