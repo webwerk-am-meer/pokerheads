@@ -6,7 +6,12 @@ import customerImages from "../../assets/images/customer_images.png";
 export function CallToAction() {
   return (
     <VStack gap="12px">
-      <Flex justify="center" gap="8px" wrap="wrap">
+      <Flex
+        maxWidth={["", "410px", "inherit"]}
+        justify="center"
+        gap="8px"
+        wrap="wrap"
+      >
         {externalLinks.map((linkInfo, index) => (
           <ExternalLinkCard {...linkInfo} variant="small" key={index} />
         ))}

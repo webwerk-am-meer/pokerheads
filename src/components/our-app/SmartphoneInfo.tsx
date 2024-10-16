@@ -28,11 +28,11 @@ export function SmartphoneInfo() {
       direction={["column", "column", "row"]}
       alignSelf="stretch"
       justify="center"
-      align={["stretch", "stretch", "stretch"]}
+      align={["stretch", "center", "stretch"]}
       position="relative"
     >
       <Image
-        display={["none", "block"]}
+        display={["none", "none", "block"]}
         zIndex={-1}
         position="absolute"
         top="50%"
@@ -40,7 +40,7 @@ export function SmartphoneInfo() {
         transform="translate(-50%, -50%)"
         src={smartPhoneInfoBackground}
       />
-      <InfoCardStack display={["none", "flex"]} wrap="wrap-reverse">
+      <InfoCardStack display={["none", "none", "flex"]} wrap="wrap-reverse">
         <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
         <InfoCard
           alignSelf="start"
@@ -67,7 +67,7 @@ export function SmartphoneInfo() {
               <Box key={index}>
                 <Popover
                   isLazy
-                  lazyBehavior="keepMounted"
+                  lazyBehavior="unmount"
                   placement={small ? smallPopoverPlacement : popoverPlacement}
                   trigger="hover"
                 >
@@ -98,7 +98,7 @@ export function SmartphoneInfo() {
           )}
         </Box>
       </Flex>
-      <InfoCardStack display={["none", "flex"]} wrap="wrap">
+      <InfoCardStack display={["none", "none", "flex"]} wrap="wrap">
         <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
         <InfoCard
           alignSelf="end"
@@ -111,7 +111,7 @@ export function SmartphoneInfo() {
       <Grid
         gap="10px"
         justifyContent="stretch"
-        display={["grid", "none"]}
+        display={["grid", "grid", "none"]}
         templateColumns="auto auto"
       >
         <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
