@@ -1,4 +1,5 @@
-import { Box, Text, TextProps } from "@chakra-ui/react";
+import { Box, Flex, Text, TextProps } from "@chakra-ui/react";
+import { AutoTextSize } from "auto-text-size";
 
 export function TitleText({ children, ...rest }: TextProps) {
   return (
@@ -47,8 +48,19 @@ export function Title({
   underTitleText: string;
 }) {
   return (
-    <Box>
-      <TitleText align="center">{titleText}</TitleText>
+    <Box width="100%">
+      <Flex
+        lineHeight={["50px", "60px", "65px"]}
+        fontWeight="700"
+        width="100%"
+        color="white"
+        justify="center"
+        fontFamily="Jost"
+      >
+        <AutoTextSize mode="boxoneline" maxFontSizePx={48}>
+          {titleText}
+        </AutoTextSize>
+      </Flex>
       <UnderTitleText align="center">{underTitleText}</UnderTitleText>
     </Box>
   );

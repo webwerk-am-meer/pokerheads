@@ -1,6 +1,7 @@
 import {
   Box,
   Flex,
+  Grid,
   Image,
   Popover,
   PopoverArrow,
@@ -97,16 +98,7 @@ export function SmartphoneInfo() {
           )}
         </Box>
       </Flex>
-      <InfoCardStack display={["flex", "none"]} wrap="wrap-reverse">
-        <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
-        <InfoCard
-          alignSelf="start"
-          topText="Lerne"
-          bottomText="die Odds kennen"
-        />
-        <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
-      </InfoCardStack>
-      <InfoCardStack wrap="wrap">
+      <InfoCardStack display={["none", "flex"]} wrap="wrap">
         <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
         <InfoCard
           alignSelf="end"
@@ -115,6 +107,28 @@ export function SmartphoneInfo() {
         />
         <InfoCard topText="Vertiefe dein Wissen" bottomText="im Quiz" />
       </InfoCardStack>
+
+      <Grid
+        gap="10px"
+        justifyContent="stretch"
+        display={["grid", "none"]}
+        templateColumns="auto auto"
+      >
+        <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
+        <InfoCard
+          alignSelf="start"
+          topText="Lerne"
+          bottomText="die Odds kennen"
+        />
+        <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
+        <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
+        <InfoCard
+          alignSelf="end"
+          topText="Analysiere"
+          bottomText="spezielle Hände"
+        />
+        <InfoCard topText="Vertiefe dein Wissen" bottomText="im Quiz" />
+      </Grid>
     </Flex>
   );
 }

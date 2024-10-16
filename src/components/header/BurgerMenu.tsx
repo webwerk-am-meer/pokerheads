@@ -1,4 +1,5 @@
 import {
+  Box,
   Drawer,
   DrawerContent,
   DrawerOverlay,
@@ -14,7 +15,7 @@ import { ArrowRightIcon } from "@chakra-ui/icons";
 export function BurgerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
+    <Box width="40px">
       <Image
         onMouseDown={onOpen}
         cursor="pointer"
@@ -59,6 +60,6 @@ export function BurgerMenu() {
           </VStack>
         </DrawerContent>
       </Drawer>
-    </>
+    </Box>
   );
 }
