@@ -36,7 +36,6 @@ export function ExternalLinkCard({
       bgColor="white"
       border="3px solid #1E1E1E"
       boxShadow="4px 4px 20px 0px #00000040"
-      transition="background-color 0.25s"
     >
       <Image width={iconSize} height={iconSize} src={image} />
       <Stack minWidth="100px" gap="-30px">
@@ -59,6 +58,37 @@ export function ExternalLinkCard({
           {bottomText}
         </Text>
       </Stack>
+    </Link>
+  );
+}
+
+type Props2 = {
+  image: string;
+  text: string;
+  link: string;
+};
+
+export function ExternalLinkCircle({ link, image, text }: Props2) {
+  return (
+    <Link
+      _hover={{ textDecoration: "none" }}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      height="100px"
+      width="100px"
+      borderRadius="50px"
+      isExternal
+      bgColor="white"
+      border="3px solid #1E1E1E"
+      boxShadow="4px 4px 20px 0px #00000040"
+      href={link}
+    >
+      <Image boxSize="35px" src={image} />
+      <Text align="center" color="#1E1E1E" fontWeight="800" fontSize="15px">
+        {text}
+      </Text>
     </Link>
   );
 }

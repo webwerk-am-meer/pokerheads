@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Grid,
   Image,
   Popover,
   PopoverArrow,
@@ -108,27 +107,27 @@ export function SmartphoneInfo() {
         <InfoCard topText="Vertiefe dein Wissen" bottomText="im Quiz" />
       </InfoCardStack>
 
-      <Grid
-        gap="10px"
-        justifyContent="stretch"
-        display={["grid", "grid", "none"]}
-        templateColumns="auto auto"
-      >
-        <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />
-        <InfoCard
-          alignSelf="start"
-          topText="Lerne"
-          bottomText="die Odds kennen"
-        />
-        <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />
-        <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />
-        <InfoCard
-          alignSelf="end"
-          topText="Analysiere"
-          bottomText="spezielle Hände"
-        />
-        <InfoCard topText="Vertiefe dein Wissen" bottomText="im Quiz" />
-      </Grid>
+      {/*<Grid*/}
+      {/*  gap="10px"*/}
+      {/*  justifyContent="stretch"*/}
+      {/*  display={["grid", "grid", "none"]}*/}
+      {/*  templateColumns="auto auto"*/}
+      {/*>*/}
+      {/*  <InfoCard topText="Gewinne Sachpreise" bottomText="im Tunier" />*/}
+      {/*  <InfoCard*/}
+      {/*    alignSelf="start"*/}
+      {/*    topText="Lerne"*/}
+      {/*    bottomText="die Odds kennen"*/}
+      {/*  />*/}
+      {/*  <InfoCard topText="Trainiere" bottomText="mit dem Trainer" />*/}
+      {/*  <InfoCard topText="Beweise dich" bottomText="im Elo-Match" />*/}
+      {/*  <InfoCard*/}
+      {/*    alignSelf="end"*/}
+      {/*    topText="Analysiere"*/}
+      {/*    bottomText="spezielle Hände"*/}
+      {/*  />*/}
+      {/*  <InfoCard topText="Vertiefe dein Wissen" bottomText="im Quiz" />*/}
+      {/*</Grid>*/}
     </Flex>
   );
 }

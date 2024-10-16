@@ -1,5 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { ExternalLinkCard } from "../base/ExternalLinkCard.tsx";
+import {
+  ExternalLinkCard,
+  ExternalLinkCircle,
+} from "../base/ExternalLinkCard.tsx";
 import { externalLinks } from "../../constants/externalLink.ts";
 
 export function Links() {
@@ -9,6 +12,7 @@ export function Links() {
         Ein Account, für alle Plattformen
       </Text>
       <Flex
+        display={["none", "flex"]}
         align="stretch"
         wrap="wrap"
         justify="center"
@@ -16,6 +20,21 @@ export function Links() {
       >
         {externalLinks.map((linkInfo, index) => (
           <ExternalLinkCard {...linkInfo} variant="large" key={index} />
+        ))}
+      </Flex>
+      <Flex
+        display={["flex", "none"]}
+        maxWidth={["", "410px", "inherit"]}
+        justify="center"
+        gap="5px"
+      >
+        {externalLinks.map(({ image, bottomText, link }, index) => (
+          <ExternalLinkCircle
+            key={index}
+            image={image}
+            text={bottomText}
+            link={link}
+          />
         ))}
       </Flex>
     </Flex>
