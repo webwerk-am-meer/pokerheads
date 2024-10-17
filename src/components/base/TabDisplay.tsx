@@ -69,7 +69,7 @@ export function TabDisplay({
             position="absolute"
             src={backgroundImage}
           />
-          <Box width={["250px", "279px"]} height={["444px", "494px"]}>
+          <Box width={["279px"]} height={["494px"]}>
             <Image
               width="100%"
               height="100%"

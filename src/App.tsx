@@ -7,9 +7,8 @@ import { Agb } from "./components/AGB/Agb.tsx";
 import { ReactNode, useEffect, useMemo } from "react";
 import { Box, Stack } from "@chakra-ui/react";
 import { Footer } from "./components/Footer.tsx";
-import { allDestinies } from "./components/header/navigationLinks.ts";
+import { allDestinies, allLinks } from "./components/header/navigationLinks.ts";
 import { HeaderBar } from "./components/header/HeaderBar.tsx";
-import { BreakpointText } from "./components/base/BreakpointText.tsx";
 
 export function App() {
   const { pathname } = useLocation();
@@ -20,15 +19,14 @@ export function App() {
 
   return (
     <Stack
+      id={allLinks.start.link}
       overflow="clip"
       minHeight="100vh"
-      padding={["10px", "15px", "20px", "25px"]}
-      justify="space-between"
       bgGradient="linear(to-b, #253C4A, #0C1F2C)"
-      gap={["40px", "30px", "20px", "10px"]}
+      gap={["15px", "5px", "0px"]}
     >
       <HeaderBar />
-      <Box>
+      <Box flexGrow={1} padding={["10px", "15px", "20px", "25px"]}>
         <DisplayRoute path={allDestinies.map((destiny) => destiny.link)}>
           <HomePage />
         </DisplayRoute>
@@ -41,9 +39,9 @@ export function App() {
         <DisplayRoute path="/impressum">
           <Imprint />
         </DisplayRoute>
+        {/*<BreakpointText />*/}
       </Box>
       <Footer />
-      <BreakpointText />
     </Stack>
   );
 }

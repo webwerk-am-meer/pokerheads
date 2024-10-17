@@ -1,11 +1,11 @@
-import { Flex, Image, Text, VStack } from "@chakra-ui/react";
+import { Flex, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { externalLinks } from "../../constants/externalLink.ts";
 import { ExternalLinkCard, ExternalLinkCircle } from "./ExternalLinkCard.tsx";
 import customerImages from "../../assets/images/customer_images.png";
 
 export function CallToAction() {
   return (
-    <VStack gap="12px">
+    <Stack gap="12px">
       <Flex
         display={["none", "flex"]}
         maxWidth={["", "410px", "inherit"]}
@@ -20,7 +20,7 @@ export function CallToAction() {
       <Flex
         display={["flex", "none"]}
         maxWidth={["", "410px", "inherit"]}
-        justify="center"
+        justify="space-between"
         gap="5px"
       >
         {externalLinks.map(({ image, bottomText, link }, index) => (
@@ -42,6 +42,6 @@ export function CallToAction() {
           Nutzer
         </Text>
       </VStack>
-    </VStack>
+    </Stack>
   );
 }
