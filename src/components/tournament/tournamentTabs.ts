@@ -4,17 +4,17 @@ import daily from "../../assets/images/daily_tournament.webp";
 const tabData: InfoTabData[] = [
   {
     tabText: "Allgemein",
-    description: placeholderDescription,
+    description: 'Allgemein',
     image: "",
   },
   {
     tabText: "Tages Turniere",
-    description: placeholderDescription,
+    description: 'Spiele mit und gegen die besten Spieler in unseren Tages Turnieren. Und gewinne tolle Preise.',
     image: daily,
   },
   {
     tabText: "Monats Turniere",
-    description: placeholderDescription,
+    description: 'Spiele mit und gegen die besten Spieler in unseren Monats Turnieren. Und gewinne tolle Preise.',
     image: "",
   },
 ];

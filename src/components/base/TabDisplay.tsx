@@ -23,6 +23,8 @@ export function TabDisplay({
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const displayTabsOnTop = useBreakpointValue({ base: true, lg: false });
 
+  console.log("selectedTab", selectedTab);
+
   return (
     <>
       {displayTabsOnTop && (

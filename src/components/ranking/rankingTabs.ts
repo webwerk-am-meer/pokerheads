@@ -9,17 +9,17 @@ const tabData: InfoTabData[] = [
   },
   {
     tabText: "Cashgame",
-    description: placeholderDescription,
+    description: 'Spiele Cashgame und trete gegen andere Spieler an, um in der Rangliste aufzusteigen.',
     image: cashgame,
   },
   {
     tabText: "Elo-Match",
-    description: placeholderDescription,
+    description: 'Spiele gegen andere Spieler in einem Elo-Match und steige in der Rangliste auf.',
     image: "",
   },
   {
     tabText: "Turniere",
-    description: placeholderDescription,
+    description: 'Spiele in unseren Turnieren und gewinne tolle Preise, und steige in der Rangliste auf.',
     image: "",
   },
 ];
