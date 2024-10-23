@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { BaseText } from "./Imprint";
+import { HeaderBar } from "../header/HeaderBar";
+import { Footer } from "../Footer";
 
 export function DataSecurity() {
   const variant = useBreakpointValue({
@@ -29,7 +31,8 @@ export function DataSecurity() {
   const isMobile = variant === "base" || variant === "sm";
 
   return (
-    <Box bg={"bg"} className="Jost">
+    <Box bgGradient="linear(to-b, #253C4A, #0C1F2C)" className="Jost">
+      <HeaderBar />
       <Stack
         w={"100%"}
         color={"white"}
@@ -667,6 +670,7 @@ export function DataSecurity() {
         </Text>
         Stand dieser Datenschutzerklärung: <span>8.9.2022</span>
       </Stack>
+      <Footer />
     </Box>
   );
 }

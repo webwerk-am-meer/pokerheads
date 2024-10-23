@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { ImMobile } from "react-icons/im";
 import { MdWebAsset } from "react-icons/md";
+import { HeaderBar } from "../header/HeaderBar";
+import { Footer } from "../Footer";
 
 export function BaseText({
   text,
@@ -16,7 +18,7 @@ export function BaseText({
   ...rest
 }: {
   text?: string;
-  fs?: string | number;
+  fs?: string | number | string[];
   color?: string;
   bold?: boolean;
   center?: boolean;
@@ -27,7 +29,7 @@ export function BaseText({
 }) {
   return (
     <Text
-    className="Jost"
+      className="Jost"
       fontSize={fs}
       color={color ?? "white"}
       fontFamily={"Jost"}
@@ -47,7 +49,8 @@ export function Imprint() {
   }, []);
 
   return (
-    <Box bg={"bg"} className="Jost">
+    <Box bgGradient="linear(to-b, #253C4A, #0C1F2C)" className="Jost">
+      <HeaderBar />
       <Stack
         w={"100%"}
         px={2}
@@ -145,6 +148,7 @@ export function Imprint() {
           </HStack>
         </Text>
       </Stack>
+      <Footer />
     </Box>
   );
 }

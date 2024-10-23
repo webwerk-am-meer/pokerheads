@@ -8,6 +8,7 @@ type NavigationLinks = {
   ranking: NavigationLink;
   training: NavigationLink;
   app: NavigationLink;
+  blogs: NavigationLink;
 };
 
 export const allLinks: NavigationLinks = {
@@ -27,6 +28,10 @@ export const allLinks: NavigationLinks = {
     name: "Training",
     link: "/training",
   },
+  blogs: {
+    name: "Blogs",
+    link: "/blogs",
+  }
 };
 
 export const allDestinies = Object.values(allLinks);

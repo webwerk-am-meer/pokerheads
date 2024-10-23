@@ -1,9 +1,12 @@
 import { Box, Center, Stack } from "@chakra-ui/react";
 import { BaseText } from "./Imprint";
+import { HeaderBar } from "../header/HeaderBar";
+import { Footer } from "../Footer";
 
 export function Agb() {
   return (
-    <Box bg={"bg"} className="Jost">
+    <Box bgGradient="linear(to-b, #253C4A, #0C1F2C)" className="Jost">
+      <HeaderBar />
       <Stack
         w={"100%"}
         bg={"bg"}
@@ -96,6 +99,7 @@ export function Agb() {
           Stand: 10.05.2024
         </Box>
       </Stack>
+      <Footer />
     </Box>
   );
 }
